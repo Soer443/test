@@ -41,9 +41,7 @@
 
 }
 
-.center2 {
-  margin-left: 43px; ;
-}
+
 button:active {
   background-color: cyan;
   opacity: 0.6;

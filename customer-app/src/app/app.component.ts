@@ -6,15 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  img = 'assets/img/crystal_multi_venompool.png';
+  img = '';
   crystalCount: number;
-  diapason = [0,1,2,3,4,5,6,7,8,9,10];
+  diapason = [1,2,3];
   fon = 'assets/img/joel-cuellar-joel-cuellar-environment-artist-cuellar-mine-company-thumbnail.jpg/';
 
 
 
   show() {
-    var rand = this.diapason[0] - 0.5 + Math.random() * (this.diapason[10] - this.diapason[0] + 1);
+    var rand = this.diapason[0] - 0.5 + Math.random() * (this.diapason[2] - this.diapason[0] + 1);
     this.crystalCount = Math.round(rand);
+  }
+  func() {
+    var rand = this.diapason[0] - 0.5 + Math.random() * (this.diapason[2] - this.diapason[0] + 1);
+    rand = Math.round(rand);
+    if (rand == 1) {
+      this.img = 'assets/img/Crystal_electro.png'
+    }
+    if (rand == 2) {
+      this.img = 'assets/img/Crystal_blackwidow.png'
+    }
+    if (rand == 3) {
+      this.img = 'assets/img/Crystal_generic5.png'
+    }
   }
 }
